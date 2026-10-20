@@ -1,30 +1,27 @@
-# Shell, permissions
+# Shell, I/O Redirections and filters
 
-Scripts Bash sur les permissions, les utilisateurs et les groupes sous Linux.
-Testés sur Ubuntu 22.04 LTS.
+Each script is exactly two lines: a bash shebang and one command.
 
-## Scripts
-
-| Fichier | Description |
-|---|---|
-| `0-iam_betty` | Bascule l'utilisateur courant sur `betty`. |
-| `1-who_am_i` | Affiche le nom d'utilisateur effectif de l'utilisateur courant. |
-| `2-groups` | Affiche tous les groupes dont l'utilisateur courant fait partie. |
-| `3-new_owner` | Change le propriétaire du fichier `hello` pour `betty`. |
-| `4-empty` | Crée un fichier vide nommé `hello`. |
-| `5-execute` | Ajoute la permission d'exécution au propriétaire du fichier `hello`. |
-| `6-multiple_permissions` | Ajoute l'exécution au propriétaire et au groupe, et la lecture aux autres, sur `hello`. |
-| `7-everybody` | Ajoute l'exécution au propriétaire, au groupe et aux autres sur `hello`. |
-| `8-James_Bond` | Met `hello` en mode 007 : aucune permission pour le propriétaire et le groupe, toutes pour les autres. |
-| `9-John_Doe` | Met `hello` en mode 753 (`-rwxr-x-wx`). |
-| `10-mirror_permissions` | Copie le mode du fichier `olleh` sur le fichier `hello`. |
-| `11-directories_permissions` | Ajoute l'exécution à tous les sous-répertoires du répertoire courant, sans toucher aux fichiers réguliers. |
-| `12-directory_permissions` | Crée le répertoire `my_dir` avec les permissions 751. |
-| `13-change_group` | Change le groupe du fichier `hello` pour `school`. |
-| `14-change_owner_and_group` | Change le propriétaire en `vincent` et le groupe en `staff` pour tous les fichiers et répertoires du répertoire courant. |
-| `15-symbolic_link_permissions` | Change le propriétaire et le groupe du lien symbolique `_hello` en `vincent` et `staff`. |
-| `16-if_only` | Change le propriétaire de `hello` pour `vincent`, uniquement s'il appartient à `guillaume`. |
-
-## Auteur
-
-Gabriel Limoges
+- 0-hello_world: prints "Hello, World"
+- 1-confused_smiley: prints a confused smiley
+- 2-hellofile: displays /etc/passwd
+- 3-twofiles: displays /etc/passwd and /etc/hosts
+- 4-lastlines: displays the last 10 lines of /etc/passwd
+- 5-firstlines: displays the first 10 lines of /etc/passwd
+- 6-third_line: displays the third line of the file iacta
+- 7-file: creates a file with a special name containing "Best School"
+- 8-cwd_state: writes the result of ls -la into ls_cwd_content
+- 9-duplicate_last_line: duplicates the last line of iacta
+- 10-no_more_js: deletes all .js regular files in the current directory and subfolders
+- 11-directories: counts the directories and sub-directories (hidden included)
+- 12-newest_files: displays the 10 newest files
+- 13-unique: prints only the words that appear exactly once, sorted
+- 14-findthatword: displays the lines containing "root" in /etc/passwd
+- 15-countthatword: counts the lines containing "bin" in /etc/passwd
+- 16-whatsnext: displays the lines containing "root" and 3 lines after
+- 17-hidethisword: displays the lines of /etc/passwd without "bin"
+- 18-letteronly: displays the lines of /etc/ssh/sshd_config starting with a letter
+- 19-AZ: replaces A and c with Z and e
+- 20-hiago: removes all letters c and C
+- 21-reverse: reverses its input
+- 22-users_and_homes: displays users and their home directories, sorted
